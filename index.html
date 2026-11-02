@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="weather-clear">
+    <div class="weather-scene" aria-hidden="true">
+        <div class="cloud-layer cloud-layer-1">
+            <span class="cloud cloud-1">☁️</span>
+            <span class="cloud cloud-2">☁️</span>
+            <span class="cloud cloud-3">☁️</span>
+        </div>
+        <div class="cloud-layer cloud-layer-2">
+            <span class="cloud cloud-4">☁️</span>
+            <span class="cloud cloud-5">☁️</span>
+            <span class="cloud cloud-6">☁️</span>
+        </div>
+
+        <div class="rain-layer">
+            <span class="raindrop" style="--x: 8%; --delay: 0s; --duration: 1.1s;"></span>
+            <span class="raindrop" style="--x: 18%; --delay: 0.3s; --duration: 1.4s;"></span>
+            <span class="raindrop" style="--x: 28%; --delay: 0.8s; --duration: 1.2s;"></span>
+            <span class="raindrop" style="--x: 38%; --delay: 0.1s; --duration: 1.5s;"></span>
+            <span class="raindrop" style="--x: 48%; --delay: 0.6s; --duration: 1.3s;"></span>
+            <span class="raindrop" style="--x: 58%; --delay: 0.4s; --duration: 1.6s;"></span>
+            <span class="raindrop" style="--x: 68%; --delay: 0.9s; --duration: 1.2s;"></span>
+            <span class="raindrop" style="--x: 78%; --delay: 0.2s; --duration: 1.4s;"></span>
+            <span class="raindrop" style="--x: 88%; --delay: 0.7s; --duration: 1.3s;"></span>
+            <span class="raindrop" style="--x: 96%; --delay: 0.5s; --duration: 1.1s;"></span>
+        </div>
+
+        <div class="snow-layer">
+            <span class="snowflake" style="--x: 8%; --delay: 0s; --duration: 12s;"></span>
+            <span class="snowflake" style="--x: 18%; --delay: 1.2s; --duration: 10s;"></span>
+            <span class="snowflake" style="--x: 28%; --delay: 2.3s; --duration: 13s;"></span>
+            <span class="snowflake" style="--x: 38%; --delay: 0.8s; --duration: 11s;"></span>
+            <span class="snowflake" style="--x: 48%; --delay: 2s; --duration: 14s;"></span>
+            <span class="snowflake" style="--x: 58%; --delay: 1.5s; --duration: 12s;"></span>
+            <span class="snowflake" style="--x: 68%; --delay: 0.6s; --duration: 15s;"></span>
+            <span class="snowflake" style="--x: 78%; --delay: 2.6s; --duration: 10s;"></span>
+            <span class="snowflake" style="--x: 88%; --delay: 1.6s; --duration: 13s;"></span>
+            <span class="snowflake" style="--x: 96%; --delay: 0.5s; --duration: 12s;"></span>
+        </div>
+
+        <div class="mist-layer"></div>
+        <div class="lightning"></div>
+    </div>
+
+    <div class="weather-app">
+        <h1>Weather App</h1>
+        <p>Check the weather in any city</p>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <p id="message"></p>
+
+        <div id="weatherResult" class="weather-result">
+            <h2 id="cityName">City Name</h2>
+            <div id="weatherIcon">🌤️</div>
+            <h3 id="temperature">--°C</h3>
+            <p id="description">Weather condition</p>
+
+            <div class="weather-details">
+                <div>
+                    <span>Humidity</span>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div>
+                    <span>Wind Speed</span>
+                    <p id="windSpeed">-- km/h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
